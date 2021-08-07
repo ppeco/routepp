@@ -8,7 +8,7 @@ class Router {
                                  callable $router) {
         if(isset($_GET['__url'])&&
                 preg_match("$regex$", $_GET['url'], $data)){
-            $router($data);
+            echo $router($data);
         }
     }
 }
