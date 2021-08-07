@@ -1,5 +1,6 @@
 <?php
 
+namespace ppeco\router;
 
 use JetBrains\PhpStorm\Language;
 
@@ -9,6 +10,7 @@ class Router {
         if(isset($_GET['__url'])&&
                 preg_match("$regex$", $_GET['url'], $data)){
             echo $router($data);
+            exit;
         }
     }
 }

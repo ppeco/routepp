@@ -3,7 +3,9 @@
     "description": "Simple library for route pages",
     "type": "library",
     "license": "MIT",
-    "require": {},
+    "require": {
+        "php": "^8.0"
+    },
     "autoload": {
         "psr-0": {
             "ppeco\\router\\": "src"
