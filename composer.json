@@ -1,0 +1,12 @@
+{
+    "name": "ppeco/routepp",
+    "description": "Simple library for route pages",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "ppeco\\router\\": "src"
+        }
+    }
+}
