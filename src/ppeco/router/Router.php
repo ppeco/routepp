@@ -13,7 +13,7 @@ class Router {
         $regex = str_replace("/", "\\/", $regex);
         if(isset($_SERVER["REQUEST_URI"])&&
                 preg_match("/$regex$/", $_SERVER["REQUEST_URI"], $data)){
-            (self::$output??function($output) { echo $output; })->call($router($data));
+            (self::$output??function($output) { echo $output; })->call(self::$output, $router($data));
             exit;
         }
     }
