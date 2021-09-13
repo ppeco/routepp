@@ -12,7 +12,7 @@ class Router {
                                  callable $router) {
         $regex = str_replace("/", "\\/", $regex);
         if(isset($_SERVER["REQUEST_URI"])&&
-            preg_match("/$regex$/", $_SERVER["REQUEST_URI"], $data)){
+            preg_match("/$regex$/", strtok($_SERVER["REQUEST_URI"], '?'), $data)){
             (self::$output??function($output) { echo $output; })->call(new Router(), $router($data));
             exit;
         }
